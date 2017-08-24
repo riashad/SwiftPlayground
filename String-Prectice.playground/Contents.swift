@@ -113,4 +113,45 @@ welcome.insert("!", at: welcome.endIndex) //single char insert
 
 welcome.insert(contentsOf:welcome2.characters, at: welcome.index(before: welcome.endIndex)) // adding one string value to another
 
-//
+// Suffix and Prefix Practice
+
+let playRomio = [
+    "Act 1 Sence 1 : Juliate “Act 1 Scene 1: Verona, A public place",
+    "Act 1 Scene 2: Capulet's mansion",
+    "Act 1 Scene 3: A room in Capulet's mansion",
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+    "Act 2 Scene 1: Outside Capulet's mansion",
+    "Act 2 Scene 2: Capulet's orchard",
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+    "Act 2 Scene 4: A street in Verona",
+    "Act 2 Scene 5: Capulet's mansion",
+    "Act 2 Scene 6: Friar Lawrence's cell"
+]
+
+/* Counting how may acts and sences the playRomio Has */
+
+//Counting using Suffix
+var act1SenceCount = 0
+
+for sence in playRomio {
+    if sence.hasPrefix("Act 1"){
+        act1SenceCount += 1
+    }
+}
+print("\nThere are \(act1SenceCount) sences in the play")
+
+
+//Co
+var mansionCount = 0
+var cellCount = 0
+
+for sence in playRomio {
+    if sence.hasSuffix("mansion") {
+        mansionCount += 1
+    } else if sence.hasSuffix("cell") {
+        cellCount += 1
+    }
+}
+
+print ("There are \(mansionCount) mansion & \(cellCount) cells in the play")
