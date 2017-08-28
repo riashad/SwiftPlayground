@@ -40,7 +40,8 @@ for (key, value) in numberCounting{
 print("")
 var airportNames: [String: String] = ["Bangaldesh" : "Shahajala International Airport", "India" : "Neheru Airport", "Singapore" : "Changi Airport", "Malaysia": "Mao Shetung Airport"]
 
-for (country, internationalAirportNames) in airportNames {
+// Less Than < or greater than > indicates ASE or DESC
+for (country, internationalAirportNames) in airportNames.sorted(by: <) {
     print("\(country) : \(internationalAirportNames)")
 }
 

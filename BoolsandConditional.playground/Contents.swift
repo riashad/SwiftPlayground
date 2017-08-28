@@ -100,3 +100,12 @@ case "fallthrough" :
 default:
     print ("You are worng dude! Right one is \(student) \n")
 }
+
+
+// Availability Check
+
+if #available(iOS 10.0, macOS 10.12, *){
+    print("works fine")
+}else{
+    print("need an upgrade")
+}
